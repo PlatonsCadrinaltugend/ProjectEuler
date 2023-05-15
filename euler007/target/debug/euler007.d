@@ -1,1 +1,0 @@
-C:\Users\Domin\OneDrive\Desktop\Studiumsstuff\Programmierung\Rust\Project\ Euler\euler007\target\debug\euler007.exe: C:\Users\Domin\OneDrive\Desktop\Studiumsstuff\Programmierung\Rust\Project\ Euler\euler007\src\main.rs
