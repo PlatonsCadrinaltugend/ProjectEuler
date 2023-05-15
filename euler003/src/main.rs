@@ -1,19 +1,30 @@
 fn main() {
-    prime_numbers(200);
+    let number: f64 = 600851475143.0;
+    let mut primes: Vec<i64> = prime_numbers(number.clone());
+    primes.reverse();
+    let number2: i64 = number as i64;
+    for elem in primes {
+        if number2 %elem == 0{
+            print!("{}", elem);
+            break
+        }
+    }
 }
 
-fn prime_numbers(number: i32) -> Vec<i32>{
-    let number2 = number.clone()/2;
-    let mut prime_factors = Vec::new();
+fn prime_numbers(number: f64) -> Vec<i64>{
+    let number2 = number.clone().sqrt() as i64;
+    let mut prime_factors = vec![];
     let mut amount_factors = 0;
-    for x in 1..number{
+    for x in 1..number2{
         for y in 1..x{
             if x%y == 0{
                 amount_factors +=1;
+                if amount_factors>1{
+                    break
+                }
             }
         }
         if amount_factors == 1{
-            println!("{}", x);
             prime_factors.push(x);
         }
         amount_factors = 0;
