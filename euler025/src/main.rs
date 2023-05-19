@@ -1,5 +1,5 @@
 use num_bigint::BigUint;
-fn main() 
+fn main(){
     let mut current = BigUint::from(1 as u64);
     let mut before = Vec::new();
     before.push(BigUint::from(1 as u64));
@@ -12,4 +12,4 @@ fn main()
         pos+=1;
     }
     println!("{}", pos);
-
+}
