@@ -1,6 +1,8 @@
 use num_bigint::BigUint;
+use std::time::{Instant};
 
 fn main() {
+    let start = Instant::now();
     let mut factorial: BigUint = BigUint::from(1 as u64);
     let mut sum: BigUint = BigUint::from(0 as u64);
     for x in 1..=100{
@@ -11,4 +13,5 @@ fn main() {
         factorial = factorial/BigUint::from(10 as u64);
     }
     println!("{}", sum);
+    println!("{:?}", start.elapsed());
 }

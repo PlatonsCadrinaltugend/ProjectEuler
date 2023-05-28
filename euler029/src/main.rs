@@ -1,5 +1,7 @@
+use std::time::{Instant};
 use num_bigint::BigUint;
 fn main() {
+    let start = Instant::now();
     let mut vector = Vec::new();
     for a in 2..=100{
         for b in 2..=100{
@@ -10,4 +12,5 @@ fn main() {
         }
     }
     println!("{}", vector.len());
+    println!("{:?}", start.elapsed());
 }

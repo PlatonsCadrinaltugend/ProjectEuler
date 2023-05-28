@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let mut sum = 0;
     let mut abundante = Vec::new();
     for i in 1..=28123{
@@ -22,6 +24,7 @@ fn main() {
         }
     }
     println!("{}",sum);
+    println!("{:?}", start.elapsed());
 }
 fn abundant(number:i64) -> bool{
     let mut sum = 0;

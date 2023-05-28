@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let mut max = 0;
     let mut xx = 0;
     for x in 1..=1_000_000{
@@ -9,6 +11,7 @@ fn main() {
         }
     }
     println!("{}", xx);
+    println!("{:?}", start.elapsed());
 }
 
 fn collatz(mut number:u64) -> u64{

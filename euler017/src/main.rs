@@ -1,9 +1,12 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let mut sum = 0;
     for x in 1..=1000{
         sum+=word(x).len();
     }
     println!("{}", sum);
+    println!("{:?}", start.elapsed());
 }
 const DICT0_19: [&str; 20] = ["zero", "one", "two","three","four","five","six","seven","eight","nine",  "ten",  "eleven",  "twelve",  "thirteen",  "fourteen",  "fifteen",  "sixteen",  "seventeen",  "eighteen",  "nineteen"];
 const DICT20_90: [&str; 10] = [ "",  "",  "twenty",  "thirty",  "forty",  "fifty",  "sixty",  "seventy",  "eighty",  "ninety"];

@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let mut sum = 0;
     let mut vec = Vec::new();
     vec.push(0);
@@ -11,12 +13,12 @@ fn main() {
             if vec.contains(&vec[pos]) && vec[x] != x.try_into().unwrap(){
                 if d(x as u128) == vec[pos] && x == d(vec[pos]).try_into().unwrap(){
                     sum +=vec[x];
-                    println!("{}", x);
                 }
             }
         }
     }
     println!("{}", sum);
+    println!("{:?}", start.elapsed());
 }
 fn d(n: u128)-> u128{
     let mut sum = 0;

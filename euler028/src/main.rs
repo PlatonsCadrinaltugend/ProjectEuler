@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     const MAX:usize = 1001;
     let line = vec![0;MAX];
     let mut array = vec![line.clone();MAX];
@@ -40,5 +42,5 @@ fn main() {
         sum += array[x][(MAX-1)-x];
     }
     println!("sum: {}", sum);
-
+    println!("{:?}", start.elapsed());
 }

@@ -1,5 +1,7 @@
 use num_bigint::BigUint;
+use std::time::{Instant};
 fn main(){
+    let start = Instant::now();
     let mut current = BigUint::from(1 as u64);
     let mut before = Vec::new();
     before.push(BigUint::from(1 as u64));
@@ -12,4 +14,5 @@ fn main(){
         pos+=1;
     }
     println!("{}", pos);
+    println!("{:?}", start.elapsed());
 }

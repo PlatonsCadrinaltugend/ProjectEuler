@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let data = [[75,00,00,00,00,00,00,00,00,00,00,00,00,00,00],
     [95,64,00,00,00,00,00,00,00,00,00,00,00,00,00],
     [17,47,82,00,00,00,00,00,00,00,00,00,00,00,00],
@@ -28,9 +30,9 @@ fn main() {
     for a in 0..15{
         for b in 0..15{
             if b+a<=14{array[a][b] = data[a+b][b];}
-            print!("{:4} ", array[a][b]);
+            // print!("{:4} ", array[a][b]);
         }
-        println!();
+        // println!();
     }
     for y in 0..15{
         for x in 0..15{
@@ -55,9 +57,10 @@ fn main() {
                     array[y][x] = array[y][x];
                 }
             }
-            print!("{:5} ", array[y][x]);
+            // print!("{:5} ", array[y][x]);
         }
-        println!();
+        // println!();
     }
-    println!("{}", data[0][14]);
+    println!("{}", array[14][14]);
+    println!("{:?}", start.elapsed());
 }

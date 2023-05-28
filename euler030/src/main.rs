@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let mut sum = 0;
     for x in 10..=354_294{
         if is_fifth(x){
@@ -6,6 +8,7 @@ fn main() {
         }
     }
     println!("{}", sum);
+    println!("{:?}", start.elapsed());
 }
 fn is_fifth(number:u64)->bool{
     let mut current = number.clone();

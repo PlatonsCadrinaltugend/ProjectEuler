@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let blist = prime_numbers(1000);
     let mut max_a = 0;
     let mut max_b = 0;
@@ -19,6 +21,7 @@ fn main() {
         }
     }
     println!("a:{} b:{} max:{} product:{}",max_a,max_b, max_primes, max_a*max_b);
+    println!("{:?}", start.elapsed());
 }
 fn prime_numbers(number: i64) -> Vec<i64>{
     

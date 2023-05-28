@@ -1,9 +1,11 @@
+use std::time::{Instant};
 fn main() {
     /* 
-    1.1.1901 Dienstag
-    99 Jahre
-    1904 1. Schaltjahr
+    1.1.1901 Tuesday
+    99 Years
+    1904 1. leap year
     */
+    let start = Instant::now();
     let mut sundays = 0;
     let mut current_monthstart = 2;
     for x in 1901..=2000{
@@ -26,4 +28,5 @@ fn main() {
         }
     }
     println!("{}", sundays);
+    println!("{:?}", start.elapsed());
 }

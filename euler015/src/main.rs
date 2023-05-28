@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let mut array : [Vec<i64>; 21] = core::array::from_fn(|_| Vec::new());
     for y in 0..=20{
         let vecotr: Vec<i64> = Vec::new();
@@ -24,7 +26,7 @@ fn main() {
                 array[x][y] = 1;
             }
         }
-        println!();
     }
     println!("{}", array[20][20]);
+    println!("{:?}", start.elapsed());
 }

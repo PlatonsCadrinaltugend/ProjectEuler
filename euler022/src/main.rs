@@ -1,7 +1,9 @@
 use std::fs;
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     static ASCII_LOWER: [char; 26] = ['a', 'b', 'c', 'd', 'e','f', 'g', 'h', 'i', 'j','k', 'l', 'm', 'n', 'o','p', 'q', 'r', 's', 't','u', 'v', 'w', 'x', 'y','z'];
-    let contents = fs::read_to_string(r"C:\Users\Domin\OneDrive\Desktop\Studiumsstuff\Programmierung\Rust\Project Euler\euler022\p022_names.txt").expect("REASON").to_lowercase();
+    let contents = fs::read_to_string(r"C:\Users\Domin\OneDrive\Desktop\Studiumsstuff\Programmierung\Rust\ProjectEuler\euler022\p022_names.txt").expect("REASON").to_lowercase();
     let parts = contents.split("\"");
 
     let mut collection: Vec<&str> = parts.collect();
@@ -24,4 +26,5 @@ fn main() {
         // println!("{} {}",sum, *x);
     }
     println!("{}", sum_total);
+    println!("{:?}", start.elapsed());
 }

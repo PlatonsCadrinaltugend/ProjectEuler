@@ -1,5 +1,7 @@
 use num_bigint::BigUint;
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let mut largest_cycle = 0;
     let mut length_largest = 0;
     for x in prime_numbers(1000){
@@ -9,6 +11,7 @@ fn main() {
         }
     }
     println!("{}", largest_cycle);
+    println!("{:?}", start.elapsed());
 }
 
 fn prime_numbers(number: i64) -> Vec<i64>{
