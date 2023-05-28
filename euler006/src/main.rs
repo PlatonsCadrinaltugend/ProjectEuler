@@ -1,7 +1,11 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let amount = 100;
     let difference = sumsquare(amount) - squaresums(amount);
     println!("{}", difference);
+    println!("{:?}", start.elapsed());
+
 }
 
 fn squaresums(number: i64) -> i64{

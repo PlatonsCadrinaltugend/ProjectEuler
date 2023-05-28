@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let mut number = 20;
     let amount = 20;
     let mut bool1 = false;
@@ -16,4 +18,5 @@ fn main() {
         }
         bool1 = false;
     }
+    println!("{:?}", start.elapsed());
 }

@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     'outer: for x in 1..=998{
         for y in 1..=998{
             for z in 1..=998{
@@ -19,4 +21,5 @@ fn main() {
             }
         }
     }
+    println!("{:?}", start.elapsed());
 }

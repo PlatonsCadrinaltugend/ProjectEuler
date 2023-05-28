@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     'outer: for x in (1..998_001).rev(){
         if palindrome(x){
             for y in(1..999).rev(){
@@ -17,6 +19,7 @@ fn main() {
             }
         }
     }
+    println!("{:?}", start.elapsed());
 }
 
 fn palindrome(number: i32) -> bool{
