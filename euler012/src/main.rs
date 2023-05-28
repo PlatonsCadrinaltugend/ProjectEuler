@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let mut current = 1;
     let mut last = 1;
     let dividentse = 500;
@@ -9,6 +11,7 @@ fn main() {
         current +=1;
         last += current;
     }
+    println!("{:?}", start.elapsed());
     println!("{}", last);
 }
 

@@ -1,9 +1,12 @@
+use std::time::{Instant};
 fn main() {
-    let primes = prime_numbers(10);
+    let start = Instant::now();
+    let primes = prime_numbers(2_000_000);
     let mut sum = 0;
     for elem in primes{
         sum+=elem;
     }
+    println!("{:?}", start.elapsed());
     println!("{}", sum);
 }
 fn prime_numbers(number: i64) -> Vec<i64>{
