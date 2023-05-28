@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main(){
+    let start = Instant::now();
     let amount = 1000;
     let mut sum = 0;
     for i in 1..amount {
@@ -12,5 +14,6 @@ fn main(){
             sum+=i;
         }
     }
+    println!("{:?}", start.elapsed());
     println!("{}",sum)
 }
