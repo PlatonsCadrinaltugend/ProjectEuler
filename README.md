@@ -1,6 +1,6 @@
 # ProjectEuler
 https://projecteuler.net/archives
-
+```
 Time to solve the problems (measured with std::time::{Instant}):
 001 - 1.1µs
 002 - 2.3µs
@@ -11,3 +11,4 @@ Time to solve the problems (measured with std::time::{Instant}):
 007 - 15.367ms
 008 - 447.6µs
 009 - 57.031ms
+```
