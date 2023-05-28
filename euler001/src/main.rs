@@ -17,3 +17,4 @@ fn main(){
     println!("{:?}", start.elapsed());
     println!("{}",sum)
 }
+

@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let mut v = vec![1,2];
     let mut pos = 0;
     while &v[pos] + &v[pos+1] < 4_000_000{
@@ -11,5 +13,6 @@ fn main() {
             sum+=elem;
         }
     }
+    println!("{:?}", start.elapsed());
     println!("{}", sum)
 }
