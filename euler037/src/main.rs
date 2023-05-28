@@ -47,7 +47,6 @@ fn trunctable(n:i64)->bool{
         
     }
     true
-    
 }
 fn is_prime(number:i64) -> bool{
     if number<2{
