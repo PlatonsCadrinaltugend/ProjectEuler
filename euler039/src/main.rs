@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let mut max_solutions = 0;
     let mut max = 0;
     for x in 1..=1000{
@@ -28,4 +30,5 @@ fn main() {
         }
     }
     println!("{}", max);
+    println!("{:?}", start.elapsed());
 }
