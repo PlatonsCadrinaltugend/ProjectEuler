@@ -1,6 +1,7 @@
+use std::time::{Instant};
 fn main() {
-    let mut amount = 0; //for loop doesn't iterate the 2, but the 1
-    println!("{}", circular_prime(1193));
+    let start = Instant::now();
+    let mut amount = 0; //for loop doesn't iterate over the 2, but the 1
     for x in (1..1_000_000).step_by(2){
         if is_prime(x){
             if circular_prime(x){
@@ -9,6 +10,7 @@ fn main() {
         }
     }
     println!("{}", amount);
+    println!("{:?}", start.elapsed());
 }
 
 fn circular_prime(number:i64)->bool{

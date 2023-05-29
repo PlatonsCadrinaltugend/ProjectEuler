@@ -1,6 +1,7 @@
 use itertools::Itertools;
-
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let mut vec = Vec::new();
     let mut sum = 0;
     'outer: for a in 1..=1_000_000_000{
@@ -19,6 +20,7 @@ fn main() {
         }
         }
     }
+    println!("{:?}", start.elapsed());
     println!("{}", sum);
 }
 fn is_pandigital(number:String)->bool{

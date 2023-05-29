@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let mut amount = 0;
     for h in 0..=1{
         for b in 0..=100{
@@ -23,4 +25,5 @@ fn main() {
         }
     }
     println!("{}", amount);
+    println!("{:?}", start.elapsed());
 }

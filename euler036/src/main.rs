@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let mut sum = 0;
     for x in 1..=1_000_000{
         if palindrome(x){
@@ -8,6 +10,7 @@ fn main() {
         }
     }
     println!("{}", sum);
+    println!("{:?}", start.elapsed());
 }
 
 fn binary_palindrome(n:i64)->bool{

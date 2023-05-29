@@ -1,4 +1,6 @@
+use std::time::{Instant};
 fn main() {
+    let start = Instant::now();
     let mut sum = 0;
     for x in 3..=10_000_000{
         if factorial_sums(x){
@@ -6,6 +8,7 @@ fn main() {
         }
     }
     println!("{}", sum);
+    println!("{:?}", start.elapsed());
 }
 
 fn factorial_sums(number:u64)->bool{

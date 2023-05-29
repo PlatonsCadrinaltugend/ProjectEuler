@@ -16,7 +16,7 @@ fn main() {
         sum+=elem;
     }
     println!("{:?}", start.elapsed());
-    println!("{:?}", newvec);
+    // println!("{:?}", newvec);
     println!("{}", sum -(2+3+5+7));
 }
 
