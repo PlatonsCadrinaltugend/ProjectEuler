@@ -32,4 +32,12 @@ Time to solve the problems (measured with std::time::{Instant}):
 028 - 3.257ms
 029 - 46.625ms
 030 - 2.6549ms
+031 - 22.5017ms
+032 - 28.4314ms
+033 - 1.7638ms
+034 - 420.2044ms
+035 - 390.2674ms
+036 - 151.8517ms
+037 - 242.0747ms
+038 - 33.5363ms
 ```
