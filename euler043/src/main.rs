@@ -13,18 +13,6 @@ fn main() {
     println!("{:?}", start.elapsed());
 }
 
-fn is_n_pandigital(number:String, n:usize)->bool{
-    if number.len()!=n+1{
-        return false
-    }
-    let sorted = number.chars().sorted().collect::<String>();
-    let mut string = String::from("");
-    for x in 0..=n{
-        string = string + &x.to_string();
-    }
-    sorted == string
-}
-
 fn sub_string_divisibility(n:String)->bool{
     let s = n.clone();
     if s[1..=3].parse::<i64>().unwrap() %2 != 0{

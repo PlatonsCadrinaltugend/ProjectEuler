@@ -47,5 +47,7 @@ Time to solve the problems (measured with std::time::{Instant}):
 043 - 5.0151587s
 044 . 8.7468334s
 045 - 199.7µs
+048 - 1.9512ms
+052 - 109.8073ms
 067 - 999.2µs
 ```
