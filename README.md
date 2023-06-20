@@ -1,6 +1,6 @@
 # ProjectEuler
 This repository contains my solutions to various [Project Euler](projecteuler.net) problems, implemented in Rust. It serves as a personal learning project to explore, enhance and document my Rust programming skills.
-Time to solve the problems (measured with std::time::{Instant}):
+## Time to solve the problems (measured with std::time::{Instant}):
 | Project | Time |
 | :---: | --- |
 |001|1.1µs|
