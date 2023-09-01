@@ -1,7 +1,7 @@
 fn main() {
     const MAX:usize = 10;
     let mut array;
-    let mut line;
+    let line;
     if MAX%2 == 0{
         line = vec![0;MAX+1];
         array = vec![line.clone();MAX+1];   
