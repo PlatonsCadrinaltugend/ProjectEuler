@@ -1,6 +1,7 @@
 use std::fs;
 use std::collections::HashMap;
 use std::collections::HashSet;
+
 fn main() {
     let contents = fs::read_to_string(r"C:\Users\Domin\ProjectEuler\Required Files\0079_keylog.txt").expect("REASON").to_lowercase();
     let parts = contents.split("\n");
